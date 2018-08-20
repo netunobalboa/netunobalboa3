@@ -1,0 +1,334 @@
+<!-- CSS ----------------------------------------------------------------->
+<link rel="stylesheet" href="views/css/main.css">
+<!-- BOOTSTRAP-->
+<link href="views/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- TEMPLATE1 CSS -->
+<link href="views/template1/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="views/template1/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<link href="views/template1/css/sb-admin.css" rel="stylesheet">
+<!----------------------------------------------------------------------->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+
+<style>
+
+:root {
+--tipo_menu: abre_menu;
+}
+
+
+.wrapper {
+
+    width: 100%;
+
+
+}
+
+
+
+.botaozinho_girar {
+
+  transform: rotate(90deg);
+}
+
+.menu_opaco {
+
+    opacity: 0.5;
+}
+
+#sidebar {
+  height: 90%;
+  width: 25%;
+  top: 7%;
+  background: navy;
+  border-radius: 10px;
+  color: #fff;
+
+  position: fixed;
+  z-index:1;
+  z-index: 999;
+
+
+
+
+    }
+
+
+.abre_menu {
+  animation: abre_menu 0.6s;
+}
+
+    @keyframes animacao {
+
+      0%   {background-color:white; right:0%; top:7%;}
+      30%  {background-color:yellow; right:10%; top:7%;}
+      70%  {background-color:orange; right:20%; top:7%;}
+      100%  {background-color:red; right:30%; top:7%;}
+
+    }
+
+
+    @keyframes abre_menu {
+
+        from {
+          background-color: yellow;
+          width:0%;
+        }
+        to {
+          background-color: red;
+          width:25%;
+
+    }
+}
+
+
+
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 600;
+        line-height: 1.7em;
+        color: #999;
+    }
+
+    a, a:hover, a:focus {
+
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    #sidebar a {
+        color: orange;
+    }
+
+    #sidebar ul.components {
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+
+      }
+
+
+    #sidebar .sidebar-header {
+
+        background: #6d7fcc;
+    }
+
+
+    #sidebar ul p {
+        color: #fff;
+
+    }
+
+    #sidebar ul li a {
+        padding-left: 5%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+        padding-top: 10%;
+        font-size: 25;
+        display: block;
+        align-content: center;
+
+    }
+    #sidebar ul li a:hover {
+        color: yellow;
+
+    }
+
+    #sidebar ul li.active > a, a[aria-expanded="true"] {
+
+    }
+    ul ul a {
+        font-size: 18 !important;
+        padding-left: 15% !important;
+        background: #0000CD;
+    }
+
+
+    ul ul ul a {
+        font-size: 18 !important;
+        padding-left: 25% !important;
+        background: royalblue;
+    }
+
+
+</style>
+
+
+<html>
+<head >
+  <meta charset="UTF-8">
+  <title>Menu Jquery</title>
+</head>
+
+
+
+<div class ="wrapper" id="pagina_inteira">
+<form name="painel2" id="painel2" action="manutencao_usuario/id:" method="post" enctype="multipart/form-data">
+
+      <div   id="sidebar" style="display:none"  >
+
+        <ul class="navbar-nav navbar-sidenav components " id="menu_do_sidebar" >
+
+                  <li class="nav-item " data-toggle="tooltip" data-placement="right" title="MinhaCarteira" >
+                    <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#submenu_minha_carteira" style="width:100%">
+                      <i class="fa fa-bar-chart"></i>
+                      <span class="nav-link-text" >Minha Carteira</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse list-unstyled" id="submenu_minha_carteira">
+                      <li><a onclick="alerta()">Posições Atuais</a></li>
+                      <li ><a href="cards.html">Ações no Radar</a></li>
+                      <li ><a href="cards.html">Histórico</a></li>
+                    </ul>
+                  </li>
+
+
+
+                    <li class="nav-item " data-toggle="tooltip" data-placement="right" title="Ordens oficial" >
+                      <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#submenu_ordens" style="width:100%">
+                        <i class="fa fa-external-link-square"></i>
+                        <span class="nav-link-text" >Ordens Oficial</span>
+                      </a>
+                    <ul class="sidenav-second-level collapse list-unstyled" id="submenu_ordens">
+                      <li >
+                        <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#submenu2_ordens">Ordens Programadas</a>
+                        <ul class="sidenav-third-level collapse list-unstyled" id="submenu2_ordens">
+                          <li ><a href="#">Start</a></li>
+                          <li ><a href="#">Stop</a></li>
+                        </ul>
+                      </li>
+                      <li ><a href="#">Bots</a></li>
+                    </ul>
+                  </li>
+
+
+      </div>
+
+
+
+
+<div id="site">
+
+  <div class="pos-f-t header" id="menu_superior">
+
+
+    <nav class="navbar navbar-dark menu_top">
+
+
+      <button id="botaozinho1" class="navbar-toggler" type="button"   data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color:red"></span>
+      </button>
+      <button type="button" class="btn btn-warning btn-lg"  onclick="menu_rapido(1)">Menu 1</button>
+      <button id="menu2" type="button" class="btn btn-warning btn-lg" onclick="menu_rapido(2)">Opção 2</button>
+      <button type="button" class="btn btn-warning btn-lg"  onclick="menu_rapido(3)">Sessão 3</button>
+      <button type="button" class="btn btn-warning btn-lg"  onclick="menu_rapido(4)">Página 4</button>
+    </nav>
+
+ </div>
+
+  <div class="wrap" style="background-color:white" id="pagina1">
+aaaaaa
+  </div>
+
+<div class="wrap" style="background-color:white;display:none" id="pagina2">
+bbbbbbb
+</div>
+
+  <div class="wrap" style="background-color:gray;display:none" id="pagina3">
+  cccccccc
+  </div>
+
+  <div class="wrap" style="background-color:blue;display:none" id="pagina4">
+ddddddddddddd
+    <a  data-toggle="collapse" href="#Submenu1">Pages</a>
+    <ul class="collapse" id="Submenu1">
+        <li>
+            <a href="#">Page 1</a>
+        </li>
+        <li>
+            <a href="#">Page 2</a>
+        </li>
+        <li>
+            <a href="#">Page 3</a>
+        </li>
+    </ul>
+  </div>
+
+  <footer class="footer" style="display:block">
+    eeeeeeeeeeeeeee
+  </footer>
+
+</div> <!-- id=site -->
+</form>
+</div> <!-- pag inteira -->
+
+</body>
+
+
+</html>
+
+
+<!--JAVASCRIPT-->
+
+<script type="text/javascript">
+
+
+function alerta(){
+alert("aaa");
+
+  window.location.href = "/";
+
+}
+
+function IncluirPessoaOK(){
+
+
+   }
+
+</script>
+
+<script src="views/js/main.js"></script>
+
+<!-- JQUERY - a chamada do framework deve estar antes da chamada do jquery.js -->
+<script src="views/jquery/jquery-3.3.1.js"></script>
+<script src="views/jquery/jquery.js"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+<!--bootstrap javascripts-->
+<!--<script src="./node_modules/jquery/dist/jquery.min.js"></script>-->
+<script src="./node_modules/popper.js/dist/popper.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<!-- TEMPLATE1 JAVASCRIPT ---------------------------------------------->
+<script src="views/template1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="views/template1/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Page level plugin JavaScript-->
+
+
+
+<script src="views/template1/vendor/chart.js/Chart.min.js"></script>
+<script src="views/template1/vendor/datatables/jquery.dataTables.js"></script>
+<script src="views/template1/vendor/datatables/dataTables.bootstrap4.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="views/template1/js/sb-admin.min.js"></script>
+<!-- Custom scripts for this page-->
+<script src="views/template1/js/sb-admin-datatables.min.js"></script>
+<script src="views/template1/js/sb-admin-charts.min.js"></script>
+<!-------------------------------------------------------------------------------->
