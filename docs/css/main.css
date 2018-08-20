@@ -1,0 +1,186 @@
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 1;
+ overflow: hidden;
+
+}
+
+.header {
+height: 7%;
+background-color: blue;
+}
+
+.menu_top
+{background-color: #0080ff;
+height:100%;}
+
+.wrap {
+  height: 88%;
+background-color: white;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  overflow:auto;
+}
+.footer {
+  height: 5%;
+  background-color: #0080ff;
+  page-break-after: always;
+
+}
+
+.cor_botao {color:red;}
+
+
+
+
+
+
+
+
+
+  .div_add_foto:hover { border: 1px solid powderblue; }
+
+
+
+
+
+  .adicionar_foto {border:5px solid black}
+  .adicionar_foto:hover{border:5px solid yellow}
+
+.cor_de_fundo {background-color: white;}
+
+#div_tela_inteira {
+
+
+  background-color: #00009B;
+}
+
+#div_esquerda {
+  width:25%;
+  height:100%;
+  position: left;
+  float: left;
+  border:5px solid black;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: white;
+  text-align: center;
+
+}
+
+#div_scroll {
+  width:100%;
+  height:100%;
+  position: left;
+  float: left;
+  border:1px solid black;
+
+  overflow:auto;
+  overflow-x: hidden;
+  background-color: white;
+  text-align: center;
+
+}
+#div_lista {
+  border:2px solid black;
+  font-size: 15px;
+  background-color: lightsteelblue;
+  border: thin solid black;
+  display:block;
+  width:100%;
+  height:55px;
+}
+
+.brilho:hover { background-color: azure; }
+
+
+
+
+#div_direita {
+  background: white;
+  position: right;
+  justify-content: center;
+  border:5px solid black;
+  float: none;
+  background-color: white;
+}
+
+#titulo_cima {
+
+font-family: "Arial";
+font-size: 40px;
+text-align: center;
+color: darkblue;
+}
+
+#foto_cima {
+
+text-align: center;
+
+}
+
+#editar_foto {
+
+  border:2px solid darkslateblue;
+}
+
+.editar_foto:hover { border:2px solid red; }
+
+
+.campos_meio {
+
+  font-family: "Arial";
+  font-size: 20px;
+  color: darkblue;
+  font-weight:bold;
+
+}
+
+.acende_gps:hover { color: red; }
+
+#campos_meio {
+
+  text-align: center;
+  font-family: "Arial";
+  font-size: 20px;
+  color: darkblue;
+  font-weight:bold;
+
+}
+
+
+#header {
+background-color:#00009B;
+font-color:white;
+height:5%;
+text-align: center;
+font-weight:bold;
+font-size: 20px;
+text-align: justify;
+
+vertical-align: middle;
+}
+
+.foto_e_dados { display: table; }
+.foto_esquerda { float: left; width: 30%; }
+.dados_direita2 { margin-left: 35%; }
+.dados_direita { float: right; width: 50%; }
+
+.text_box_efeito {
+	border:3px solid #456879;
+	border-radius:10px;
+	height: 28px;
+  font-size: 15px;
+  background-color: lightsteelblue;
+
+}
+
+.text_box_efeito:hover {
+	border:3px solid deepskyblue;
+
+}
