@@ -16,6 +16,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
 
+<script>  
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js');
+  });
+}
+else
+{alert("Seu navegador não possui Service Work, experimente utilizar o Chrome");}
+  
+</script>
+
 <style>
 
 :root {
